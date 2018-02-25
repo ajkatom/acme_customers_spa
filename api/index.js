@@ -50,4 +50,17 @@ router.delete('/customers/:id', (req, res, next) => {
         .catch(next)
 })
 
-module.exports = router;
+router.use(function(req, res, next) {
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
+});
+
+
+router.use(function(err, req, res, next) {
+    res.status(err.status || 500);
+    console.error(err);
+    res.send({ "status": res.status, "error": err });
+});
+
+module.exports = router
