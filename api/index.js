@@ -30,7 +30,6 @@ router.post('/customers', (req, res, next) => {
             }
 
         )
-        res.redirect('/customers');
 
 
     } else {
@@ -43,9 +42,6 @@ router.delete('/customers/:id', (req, res, next) => {
     Customer.findById(req.params.id)
         .then((customer) => {
             return customer.destroy();
-        })
-        .then(() => {
-            res.redirect('/customers');
         })
         .catch(next)
 })

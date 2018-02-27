@@ -5,7 +5,7 @@ const populatecustomers = (customers) => {
         li.setAttribute('id', customer.email)
         let form = document.createElement('form');
         let dbutton = document.createElement('button');
-        dbutton.setAttribute('id', customer.id)
+        dbutton.setAttribute('id', customer.id);
         dbutton.setAttribute('onClick', 'deletecustomer(this.id)')
         let t = document.createTextNode('DELETE');
         dbutton.appendChild(t);
