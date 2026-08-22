@@ -18,13 +18,16 @@
         "url": "https://github.com/ajkatom/acme_customers_spa/issues"
     },
     "homepage": "https://github.com/ajkatom/acme_customers_spa#readme",
+    "overrides": {
+        "uuid": "^11.1.1"
+    },
     "dependencies": {
         "body-parser": "^1.18.2",
         "express": "^4.16.2",
         "is-json": "^2.0.1",
         "method-override": "^2.3.10",
         "path": "^0.12.7",
-        "pg": "^7.4.1",
-        "sequelize": "^4.33.4"
+        "pg": "^8.23.0",
+        "sequelize": "^6.37.8"
     }
 }
